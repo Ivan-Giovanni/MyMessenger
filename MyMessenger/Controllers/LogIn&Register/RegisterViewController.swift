@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController, UINavigationControllerDelegate {
     
@@ -112,10 +113,8 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Log In"
+        title = "Register"
         view.backgroundColor = .white
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register", style: .done, target: self, action: #selector(didTapRegister))
         
         registerButton.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
         
@@ -181,6 +180,15 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate {
         }
         
         //MARK: - Firebase Login
+        
+        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+            guard let result = authResult, error == nil else {
+                print("Error creating user \(error)")
+                return
+            }
+            let user = result.user
+            print("Created User \(user)")
+        }
         
     }
     
