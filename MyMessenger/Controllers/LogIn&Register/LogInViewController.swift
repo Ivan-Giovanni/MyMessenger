@@ -62,7 +62,7 @@ class LogInViewController: UIViewController {
     }()
     
     private let LoginButton: UIButton = {
-       let button = UIButton()
+        let button = UIButton()
         button.setTitle("Log In",for: .normal)
         button.backgroundColor = .link
         button.setTitleColor(.white, for: .normal)
@@ -71,7 +71,7 @@ class LogInViewController: UIViewController {
         button.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
         return button
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Log In"
@@ -83,7 +83,7 @@ class LogInViewController: UIViewController {
         
         emailField.delegate = self
         passwordField.delegate = self
-
+        
         //MARK: -Add subviews
         view.addSubview(scrollView)
         scrollView.addSubview(imageView)
@@ -115,20 +115,27 @@ class LogInViewController: UIViewController {
         
         guard let email = emailField.text, let password = passwordField.text,
               !email.isEmpty, !password.isEmpty, password.count >= 6 else {
-                  alertUserLoginError()
-                  return
+            alertUserLoginError()
+            return
         }
         
         //MARK: - Firebase Login
         
-        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { [weak self] (authResult, error) in
+            guard let strongSelf = self else {
+                return
+            }
+            
             guard let result = authResult, error == nil else {
                 print("Error log in user \(error)")
+                strongSelf.alertUserLoginError()
                 return
             }
             let user = result.user
             print("Log in user successfully \(user)")
-        }
+            strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+            
+        })
         
     }
     
