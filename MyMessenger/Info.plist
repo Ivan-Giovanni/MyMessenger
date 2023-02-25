@@ -2,10 +2,32 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSCameraUsageDescription</key>
-	<string>Please allow access to take a profile picture</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Please allow access to select a photo for your profile</string>
+	<key>1055436138745393</key>
+	<string>APP-ID</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>1055436138745393</key>
+			<array>
+				<string>fbAPP-ID</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.258849962747-oa7960nul57cfgjbnld35i1ekch624u6</string>
+			</array>
+		</dict>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+	</array>
+	<key>My Messenger</key>
+	<string>APP-NAME</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -25,5 +47,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>df4c00db891d81a11474247771082d8d</key>
+	<string>CLIENT-TOKEN</string>
 </dict>
 </plist>

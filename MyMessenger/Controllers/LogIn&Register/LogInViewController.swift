@@ -72,6 +72,7 @@ class LogInViewController: UIViewController {
         return button
     }()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Log In"
@@ -90,7 +91,6 @@ class LogInViewController: UIViewController {
         scrollView.addSubview(emailField)
         scrollView.addSubview(passwordField)
         scrollView.addSubview(LoginButton)
-        
     }
     
     override func viewDidLayoutSubviews() {
@@ -105,6 +105,7 @@ class LogInViewController: UIViewController {
         passwordField.frame = CGRect(x: 30, y: emailField.bottom+10, width: scrollView.width-60, height: 52)
         
         LoginButton.frame = CGRect(x: 30, y: passwordField.bottom+10, width: scrollView.width-60, height: 52)
+        
     }
     
     @objc private func loginButtonTapped() {

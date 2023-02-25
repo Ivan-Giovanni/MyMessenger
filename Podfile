@@ -7,8 +7,20 @@ target 'MyMessenger' do
 
   # Pods for MyMessenger
 
+# Firebase
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
+
+# Facebook
+pod 'FBSDKLoginKit'
+
+# Google sign in
+pod 'GoogleSignIn'
+
+pod 'MessageKit'
+pod 'JGProgressHUD'
+pod 'RealmSwift'
+pod 'SDWebImage'
 
 end
