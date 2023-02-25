@@ -23,6 +23,7 @@
 		CBCCCE7B29A5277C0055FE78 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCCCE7A29A5277C0055FE78 /* Extensions.swift */; };
 		CBCCCE7D29A66D830055FE78 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBCCCE7C29A66D830055FE78 /* GoogleService-Info.plist */; };
 		CBCCCE8029A887130055FE78 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCCCE7F29A887130055FE78 /* DatabaseManager.swift */; };
+		CBCCCE8329A9F7560055FE78 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCCCE8229A9F7560055FE78 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		CBCCCE7C29A66D830055FE78 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CBCCCE7F29A887130055FE78 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		CBCCCE8129A8BD9E0055FE78 /* MyMessenger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyMessenger.entitlements; sourceTree = "<group>"; };
+		CBCCCE8229A9F7560055FE78 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		FADB2C67DD3D58B71B3C215C /* Pods-MyMessenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMessenger.debug.xcconfig"; path = "Target Support Files/Pods-MyMessenger/Pods-MyMessenger.debug.xcconfig"; sourceTree = "<group>"; };
 		FEB96A66C72C20D899325E94 /* Pods-MyMessenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMessenger.release.xcconfig"; path = "Target Support Files/Pods-MyMessenger/Pods-MyMessenger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 				CBCCCE7329A51AD50055FE78 /* VideoPlayerViewController.swift */,
 				CBCCCE7529A51B250055FE78 /* NewConversationViewController.swift */,
 				CBCCCE7729A51B430055FE78 /* ProfileViewController.swift */,
+				CBCCCE8229A9F7560055FE78 /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				CBCCCE5329A509E20055FE78 /* AppDelegate.swift in Sources */,
 				CBCCCE7829A51B430055FE78 /* ProfileViewController.swift in Sources */,
 				CBCCCE5529A509E20055FE78 /* SceneDelegate.swift in Sources */,
+				CBCCCE8329A9F7560055FE78 /* ChatViewController.swift in Sources */,
 				CBCCCE7229A51AA90055FE78 /* PhotoViewerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
